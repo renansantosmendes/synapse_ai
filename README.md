@@ -20,7 +20,7 @@ synapse_ai/
 
 ## 🚀 Como Usar
 
-### Deploy no GitHub Pages
+### Deploy Automático com GitHub Actions
 
 1. **Crie um repositório no GitHub**
    - Nome do repositório: `synapse_ai` ou `[seu-usuario].github.io` (para página de usuário)
@@ -35,16 +35,27 @@ synapse_ai/
    git push -u origin main
    ```
 
-3. **Ative o GitHub Pages**
-   - Vá em Settings > Pages
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: / (root)
-   - Clique em Save
+3. **Configure o GitHub Pages (IMPORTANTE)**
+   - Vá em **Settings** → **Pages**
+   - Em **Source**, selecione: **GitHub Actions** (não "Deploy from a branch")
+   - O workflow será executado automaticamente após o push
 
-4. **Acesse seu site**
+4. **Verifique o Deploy**
+   - Vá na aba **Actions** do seu repositório
+   - Você verá o workflow "Deploy to GitHub Pages" rodando
+   - Após concluir com sucesso (✅), seu site estará disponível
+
+5. **Acesse seu site**
    - URL: `https://[seu-usuario].github.io/synapse_ai/`
    - Ou: `https://[seu-usuario].github.io/` (se for repositório de usuário)
+   - O link exato aparecerá no log do workflow
+
+### Deploy Manual
+Se preferir executar o deploy manualmente:
+1. Vá na aba **Actions**
+2. Selecione "Deploy to GitHub Pages"
+3. Clique em "Run workflow"
+4. Selecione a branch `main` e clique em "Run workflow"
 
 ## ✨ Funcionalidades
 
@@ -75,9 +86,11 @@ synapse_ai/
 
 ## 📝 Notas
 
-- O arquivo `.nojekyll` é importante para que o GitHub Pages sirva corretamente arquivos e pastas que começam com underscore
-- Para formulário funcional, integre com serviços como Formspree, Netlify Forms ou implemente um backend
-- As imagens de exemplo devem ser substituídas por suas próprias imagens
+- **GitHub Actions**: O deploy é feito automaticamente a cada push na branch `main`
+- **Workflow**: O arquivo `.github/workflows/deploy.yml` configura o processo de deploy
+- **Permissões**: O GitHub Actions precisa de permissões para fazer deploy no Pages
+- O arquivo `.nojekyll` é importante para servir corretamente arquivos que começam com underscore
+- Para formulário funcional, integre com serviços como Formspree, Netlify Forms ou backend próprio
 
 ## 🔧 Desenvolvimento Local
 
