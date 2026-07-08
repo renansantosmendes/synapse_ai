@@ -29,8 +29,8 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
         
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
         
       - name: Upload do artifact
         uses: actions/upload-pages-artifact@v3

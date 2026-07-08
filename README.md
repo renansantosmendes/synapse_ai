@@ -22,8 +22,14 @@ synapse_ai/
 
 ### Deploy Automático com GitHub Actions
 
-1. **Crie um repositório no GitHub**
-   - Nome do repositório: `synapse_ai` ou `[seu-usuario].github.io` (para página de usuário)
+#### ⚠️ PRIMEIRO: Configure o GitHub Pages
+
+1. **No seu repositório no GitHub:**
+   - Vá em **Settings** (configurações)
+   - No menu lateral, clique em **Pages**
+   - Em **Source**, selecione: **GitHub Actions**
+   - NÃO selecione "Deploy from a branch"
+   - Salve as configurações
 
 2. **Faça o upload dos arquivos**
    ```bash
@@ -31,24 +37,25 @@ synapse_ai/
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/[seu-usuario]/synapse_ai.git
+   git remote add origin https://github.com/renansantosmendes/synapse_ai.git
    git push -u origin main
    ```
 
-3. **Configure o GitHub Pages (IMPORTANTE)**
-   - Vá em **Settings** → **Pages**
-   - Em **Source**, selecione: **GitHub Actions** (não "Deploy from a branch")
-   - O workflow será executado automaticamente após o push
+3. **O Deploy será automático**
+   - Após o push, vá na aba **Actions**
+   - Você verá o workflow rodando
+   - Existem 2 workflows disponíveis:
+     - `Deploy to GitHub Pages` - workflow principal
+     - `Deploy static content to Pages` - workflow alternativo (use se o primeiro falhar)
 
-4. **Verifique o Deploy**
-   - Vá na aba **Actions** do seu repositório
-   - Você verá o workflow "Deploy to GitHub Pages" rodando
-   - Após concluir com sucesso (✅), seu site estará disponível
+4. **Se o primeiro workflow falhar:**
+   - Delete o arquivo `.github/workflows/deploy.yml`
+   - Renomeie `static.yml` para `deploy.yml`
+   - Faça commit e push novamente
 
 5. **Acesse seu site**
-   - URL: `https://[seu-usuario].github.io/synapse_ai/`
-   - Ou: `https://[seu-usuario].github.io/` (se for repositório de usuário)
-   - O link exato aparecerá no log do workflow
+   - URL: `https://renansantosmendes.github.io/synapse_ai/`
+   - O link exato aparecerá no log do workflow após sucesso
 
 ### Deploy Manual
 Se preferir executar o deploy manualmente:
