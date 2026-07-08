@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SynapseAI Solutions — IA Generativa Vertical para Finanças, Saúde e Educação</title>
+<meta name="description" content="A SynapseAI Solutions constrói produtos de IA generativa orientados a domínio para Finanças, Educação e Saúde: FinBrain, RiskGen, EduMentor AI, CourseGen Studio e ClinicaGPT.">
+<link rel="icon" href="data:image/png;base64,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b8vL7h1noHhnwtOH8VahHfXkfP8AZdid6ofSRxxn2FNml1f4i3fk2qRaZ4fsein5Le2Hqcfef25NZrab4f8ADrY1W4/tjUFPNjZSbYI29JJerH2T867LRPBvinx15Dar/wASXw/H/qrWGPyht9ET3/vNz9aq63Y3B393+v6/pD/ht4dh1vxRHc2sTDQNEkJikcfNd3OMb29x1x0AwPWvd6paRpNloemQadp0CwW0K4RF/Uk9yfWrtctSfMzphHlWoUUUVBYUUUUAFFFFABRRRQAUUUUAFFFFAHzjr0Enhy58eyopW4nuorKIgYIjmJdsfVVA/GnQ6HqEMkHgjw6gXVLmFZtavAceWGAIi3DlUUEZA5JOK9H+IfhgXU9vqaJmF7yzN0o9Ek2hv++XI/AVqfD7RfsWn32r3K51DVruW4mc9Qm8hF+gHP410e0925ioWdkR+EvhjoPhaOOXyFvdQUc3M6g4P+wvRR+vvXa0UVhKTk7s1SS2CiiikMKKKKACiiigAooooAKKKKACiiigAooooAZLFHNG0cqK6N1VhkGljjWJAiKFUdAO1OooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- base surfaces ---- */
+    --ink:#0C0E11;
+    --ink-soft:#15181C;
+    --ink-raised:#1D2126;
+    --ink-line:rgba(233,236,238,.12);
+    --paper:#F5F2EA;
+    --paper-dim:#ECE7DA;
+    --paper-line:rgba(12,14,17,.13);
+    --surface-dark:rgba(12,14,17,.90);
+    --surface-light:rgba(245,242,234,.96);
+    --surface-light-dim:rgba(236,231,218,.96);
+
+    /* ---- accents ---- */
+    --signal:#2FE1D9;
+    --signal-ink:#0E7A76;
+    --signal-dim:#12615F;
+    --copper:#C97A3E;
+    --copper-ink:#8A4F23;
+    --stone:#6F7A82;
+    --stone-soft:#9CA6AC;
+
+    /* ---- text ---- */
+    --text-ink:#15181B;
+    --text-muted:#5B6167;
+    --text-on-dark:#EDEFEF;
+    --text-on-dark-muted:rgba(237,239,239,.60);
+
+    --radius:3px;
+    --radius-md:6px;
+    --ease:cubic-bezier(.22,.7,.2,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--text-ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-synthesis:none;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Instrument Serif',Georgia,serif;
+    font-weight:400;
+    font-stretch:100%;
+    color:var(--text-ink);
+    line-height:1.16;
+    letter-spacing:0;
+    margin:0;
+    max-width:26ch;
+    text-wrap:balance;
+  }
+  h3,h4{max-width:none;}
+  em{font-style:italic;color:var(--signal-ink);}
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:3px;}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;}
+  section{position:relative;padding:120px 0;}
+  section > .wrap{z-index:2;}
+
+  .tag{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--signal-ink);font-weight:500;
+    margin-bottom:22px;padding-bottom:8px;
+    border-bottom:1px solid currentColor;
+  }
+  .tag::before{content:'§';font-size:13px;}
+  .on-dark .tag{color:var(--signal);}
+
+  .section-head{max-width:660px;margin-bottom:64px;}
+  .section-head h2{font-size:clamp(30px,4vw,44px);}
+  .section-head .lede{margin-top:18px;font-size:16.5px;line-height:1.7;color:var(--text-muted);font-family:'Inter';}
+  .on-dark .section-head .lede{color:var(--text-on-dark-muted);}
+
+  .icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+
+  /* ============ GLOBAL NEURAL FIELD (fixed background, whole site) ============ */
+  #neural-field{
+    position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:radial-gradient(rgba(12,14,17,.10) 1px, transparent 1px);
+    background-size:26px 26px;
+    opacity:.5;
+  }
+
+  /* ============ CORNER-BRACKET MOTIF ============ */
+  .bracketed{position:relative;}
+  .bracketed::before,.bracketed::after{
+    content:'';position:absolute;width:14px;height:14px;
+    border-color:var(--stone-soft);opacity:.6;transition:opacity .25s var(--ease), border-color .25s var(--ease);
+  }
+  .bracketed::before{top:-1px;left:-1px;border-top:1.5px solid;border-left:1.5px solid;}
+  .bracketed::after{bottom:-1px;right:-1px;border-bottom:1.5px solid;border-right:1.5px solid;}
+  .bracketed:hover::before,.bracketed:hover::after{opacity:1;border-color:var(--signal);}
+
+  /* ============ NAVBAR ============ */
+  header.site-nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    background:rgba(12,14,17,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--ink-line);
+  }
+  .nav-inner{
+    max-width:1180px;margin:0 auto;padding:0 28px;
+    height:68px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:12px;color:var(--text-on-dark);}
+  .brand img{width:30px;height:30px;border-radius:5px;filter:saturate(1.05);}
+  .brand-word{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;letter-spacing:.02em;}
+  .brand-word span{color:var(--signal);}
+  nav.primary-links{display:flex;align-items:center;gap:2px;}
+  nav.primary-links a{
+    color:var(--text-on-dark-muted);font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;
+    padding:10px 15px;position:relative;transition:color .2s;
+  }
+  nav.primary-links a.nav-link::after{
+    content:'';position:absolute;left:15px;right:15px;bottom:6px;height:1px;
+    background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease);
+  }
+  nav.primary-links a.nav-link:hover{color:var(--text-on-dark);}
+  nav.primary-links a.nav-link:hover::after{transform:scaleX(1);}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--signal) !important;border:1px solid var(--signal-dim);
+    padding:9px 16px !important;margin-left:10px;
+    transition:background .2s,color .2s;
+  }
+  .nav-cta:hover{background:var(--signal);color:var(--ink) !important;}
+  .nav-toggle{display:none;padding:6px;color:var(--text-on-dark);}
+  .nav-toggle .icon{width:24px;height:24px;}
+
+  .mobile-progress{height:2px;width:100%;background:var(--ink-line);position:relative;overflow:hidden;}
+  .mobile-progress i{position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--signal);transition:width .1s linear;}
+
+  @media (max-width:900px){
+    nav.primary-links{
+      position:fixed;top:69px;left:0;right:0;bottom:0;background:var(--ink);
+      flex-direction:column;align-items:stretch;gap:0;padding:14px;
+      transform:translateX(100%);transition:transform .35s var(--ease);overflow-y:auto;
+    }
+    nav.primary-links.open{transform:translateX(0);}
+    nav.primary-links a{padding:18px 12px;font-size:14px;border-bottom:1px solid var(--ink-line);}
+    nav.primary-links a.nav-link::after{display:none;}
+    .nav-cta{margin-top:10px;justify-content:center;}
+    .nav-toggle{display:inline-flex;}
+  }
+
+  /* ============ SYNAPSE INDEX RAIL (signature scroll device) ============ */
+  .synapse-rail{
+    position:fixed;left:34px;top:50%;transform:translateY(-50%);
+    z-index:150;display:flex;flex-direction:column;align-items:center;
+    height:min(50vh,420px);
+  }
+  .synapse-rail .track{position:relative;width:1px;flex:1;background:rgba(12,14,17,.16);}
+  .synapse-rail .signal{position:absolute;top:0;left:0;width:100%;height:0%;background:var(--signal);transition:height .05s linear;}
+  .synapse-rail .nodes{position:absolute;inset:0;}
+  .rail-node{
+    position:absolute;left:50%;transform:translate(-50%,-50%) rotate(45deg);
+    width:7px;height:7px;background:var(--paper);border:1.4px solid var(--stone-soft);
+    transition:background .3s,border-color .3s,box-shadow .3s;cursor:pointer;
+  }
+  .rail-node.active{background:var(--signal);border-color:var(--signal);box-shadow:0 0 0 4px rgba(47,225,217,.2);}
+  .rail-label{
+    position:absolute;left:20px;top:50%;transform:translateY(-50%);
+    white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;
+    color:var(--text-muted);opacity:0;transition:opacity .2s;pointer-events:none;text-transform:uppercase;
+  }
+  .rail-node:hover + .rail-label,.rail-node.active + .rail-label{opacity:1;}
+  @media (max-width:1240px){.synapse-rail{display:none;}}
+
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100svh;display:flex;align-items:center;
+    padding:150px 0 90px;background:var(--surface-dark);color:var(--text-on-dark);
+  }
+  .hero-inner{display:grid;grid-template-columns:1.2fr .85fr;gap:64px;align-items:end;}
+  .hero-kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--signal);margin-bottom:28px;display:flex;align-items:center;gap:12px;
+  }
+  .hero-kicker::before{content:'';width:22px;height:1px;background:var(--signal);}
+  .hero h1{font-size:clamp(38px,5.6vw,68px);color:var(--text-on-dark);font-weight:400;}
+  .hero .sub{margin-top:28px;font-size:18px;line-height:1.72;color:var(--text-on-dark-muted);max-width:540px;font-family:'Inter';}
+  .hero .ctas{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;border-radius:var(--radius);font-weight:500;font-size:13.5px;
+    font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;
+    transition:background .2s var(--ease),color .2s var(--ease),border-color .2s;
+    border:1px solid transparent;white-space:nowrap;
+  }
+  .btn-primary{background:var(--signal);color:var(--ink);border-color:var(--signal);}
+  .btn-primary:hover{background:transparent;color:var(--signal);}
+  .btn-ghost{background:transparent;color:var(--text-on-dark);border-color:var(--ink-line);}
+  .btn-ghost:hover{border-color:var(--signal);color:var(--signal);}
+  .btn-dark{background:var(--ink);color:var(--text-on-dark);border-color:var(--ink);}
+  .btn-dark:hover{background:transparent;color:var(--ink);border-color:var(--ink);}
+
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:52px;max-width:480px;background:var(--ink-line);}
+  .hero-stats .stat{background:var(--ink);padding:18px 20px;}
+  .hero-stats .stat b{display:block;font-family:'IBM Plex Mono',monospace;font-size:24px;color:var(--copper);font-weight:600;}
+  .hero-stats .stat span{font-size:12px;color:var(--text-on-dark-muted);line-height:1.4;display:block;margin-top:4px;}
+
+  .hero-console{
+    background:var(--ink-soft);border:1px solid var(--ink-line);padding:0;
+  }
+  .console-head{
+    display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--ink-line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-on-dark-muted);letter-spacing:.05em;
+  }
+  .console-head i{width:7px;height:7px;border-radius:50%;background:var(--stone);}
+  .console-body{padding:6px 0;}
+  .console-line{
+    display:flex;gap:16px;padding:13px 18px;border-bottom:1px solid var(--ink-line);
+  }
+  .console-line:last-child{border-bottom:0;}
+  .console-line .ln{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--stone);flex-shrink:0;padding-top:1px;}
+  .console-line .icon{color:var(--signal);width:16px;height:16px;margin-top:1px;}
+  .console-line b{display:block;color:var(--text-on-dark);font-size:13.5px;font-weight:500;}
+  .console-line span{font-size:12px;color:var(--text-on-dark-muted);font-family:'Inter';}
+
+  @media (max-width:940px){
+    .hero-inner{grid-template-columns:1fr;align-items:start;}
+    .hero{padding-top:120px;}
+  }
+
+  /* ============ SOBRE ============ */
+  #sobre{background:var(--surface-light);}
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start;}
+  .about-grid p{font-size:16.5px;line-height:1.85;color:var(--text-ink);margin-bottom:20px;font-family:'Inter';}
+  .about-grid p strong{font-weight:600;color:var(--signal-ink);}
+  .about-side{background:var(--ink);color:var(--text-on-dark);padding:36px 32px;position:relative;}
+  .about-side .mono{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);}
+  .about-side h3{color:var(--text-on-dark);font-size:26px;margin:16px 0 18px;font-weight:400;}
+  .about-side ul li{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--ink-line);font-size:14px;color:var(--text-on-dark-muted);align-items:flex-start;}
+  .about-side ul li:first-child{border-top:0;}
+  .about-side ul li .icon{color:var(--signal);margin-top:2px;width:16px;height:16px;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px;}}
+
+  /* ============ PILARES ============ */
+  #visao{background:var(--surface-light-dim);}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--paper-line);border:1px solid var(--paper-line);}
+  .pillar-card{background:var(--paper-dim);padding:30px 26px;position:relative;transition:background .25s;}
+  .pillar-card:hover{background:var(--paper);}
+  .pillar-num{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--copper-ink);margin-bottom:20px;letter-spacing:.05em;}
+  .pillar-icon{width:30px;height:30px;color:var(--signal-ink);margin-bottom:20px;}
+  .pillar-card h4{font-family:'Inter';font-size:16.5px;font-weight:600;margin-bottom:10px;color:var(--text-ink);}
+  .pillar-card p{font-size:14px;line-height:1.65;color:var(--text-muted);font-family:'Inter';}
+
+  /* ============ TECNOLOGIA ============ */
+  #tecnologia{background:var(--surface-dark);color:var(--text-on-dark);}
+  #tecnologia .section-head h2{color:var(--text-on-dark);}
+  .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--ink-line);border:1px solid var(--ink-line);}
+  .tech-item{background:var(--ink-soft);padding:30px 24px;transition:background .25s;}
+  .tech-item:hover{background:var(--ink-raised);}
+  .tech-item .icon{color:var(--signal);margin-bottom:18px;width:24px;height:24px;}
+  .tech-item h4{font-family:'Inter';color:var(--text-on-dark);font-size:15px;font-weight:600;margin-bottom:8px;}
+  .tech-item p{font-size:13px;color:var(--text-on-dark-muted);line-height:1.6;font-family:'Inter';}
+
+  /* ============ PRODUTOS ============ */
+  #produtos{background:var(--surface-light);}
+  .product-index{display:flex;gap:0;flex-wrap:wrap;margin-bottom:44px;border-bottom:1px solid var(--paper-line);}
+  .product-tab{
+    display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;
+    padding:14px 20px 14px 0;margin-right:26px;font-size:13px;font-weight:500;color:var(--text-muted);
+    position:relative;top:1px;transition:color .2s;
+  }
+  .product-tab .idx{color:var(--copper-ink);}
+  .product-tab .icon{width:17px;height:17px;color:var(--stone-soft);transition:color .2s;}
+  .product-tab:hover{color:var(--text-ink);}
+  .product-tab.active{color:var(--text-ink);}
+  .product-tab.active .icon{color:var(--signal-ink);}
+  .product-tab.active::after{content:'';position:absolute;left:0;right:26px;bottom:-1px;height:2px;background:var(--signal);}
+
+  .product-panel{display:none;}
+  .product-panel.active{display:block;animation:fadein .3s var(--ease);}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+  .product-layout{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start;}
+  .product-head{margin-bottom:22px;}
+  .product-head .tagline{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--signal-ink);margin-bottom:12px;}
+  .product-head h3{font-size:34px;font-weight:400;}
+  .product-desc{font-size:16px;line-height:1.8;color:var(--text-ink);margin-bottom:28px;font-family:'Inter';}
+  .diff-list{display:grid;gap:13px;margin-bottom:30px;}
+  .diff-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-ink);font-family:'Inter';}
+  .diff-list li::before{content:'—';color:var(--copper);font-family:'IBM Plex Mono',monospace;flex-shrink:0;}
+  .product-link{
+    display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;
+    color:var(--text-ink);padding:13px 20px;border:1px solid var(--paper-line);font-weight:500;font-size:13px;
+    transition:background .2s,border-color .2s,color .2s;
+  }
+  .product-link:hover{background:var(--ink);color:var(--text-on-dark);border-color:var(--ink);}
+  .product-link .icon{width:15px;height:15px;}
+
+  .tech-card{background:var(--paper-dim);border:1px solid var(--paper-line);padding:28px;}
+  .tech-card .mono-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px;}
+  .spec-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--paper-line);font-size:13.5px;}
+  .spec-row:first-of-type{border-top:0;}
+  .spec-row dt{color:var(--text-muted);flex-shrink:0;width:38%;font-family:'Inter';}
+  .spec-row dd{margin:0;color:var(--text-ink);font-weight:500;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+
+  @media (max-width:900px){.product-layout{grid-template-columns:1fr;}}
+
+  /* ============ CONFIANÇA ============ */
+  #confianca{background:var(--surface-light-dim);}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-bottom:60px;background:var(--paper-line);border:1px solid var(--paper-line);}
+  .trust-stat{background:var(--paper-dim);padding:26px 22px;}
+  .trust-stat b{display:block;font-family:'IBM Plex Mono',monospace;font-size:26px;color:var(--copper-ink);font-weight:600;}
+  .trust-stat span{font-size:12.5px;color:var(--text-muted);}
+  @media (max-width:900px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
+
+  .sla-table{width:100%;border-collapse:collapse;background:var(--paper-dim);border:1px solid var(--paper-line);}
+  .sla-table th,.sla-table td{padding:15px 18px;text-align:left;font-size:13.5px;}
+  .sla-table thead th{background:var(--ink);color:var(--text-on-dark);font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;}
+  .sla-table tbody tr{border-top:1px solid var(--paper-line);}
+  .sla-table tbody td:first-child{font-weight:600;color:var(--text-ink);font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+  .sla-table td.mono{color:var(--signal-ink);font-family:'IBM Plex Mono',monospace;font-weight:500;}
+  .sev-tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:2px 6px;margin-right:8px;border:1px solid currentColor;}
+  .sev-1{color:#B4472E;}.sev-2{color:var(--copper-ink);}.sev-3{color:var(--signal-ink);}.sev-4{color:var(--stone);}
+
+  .trust-columns{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:60px;}
+  .trust-col{border-top:1px solid var(--paper-line);padding-top:24px;}
+  .trust-col h4{font-family:'Inter';font-size:16.5px;margin-bottom:14px;color:var(--text-ink);font-weight:600;}
+  .trust-col p{font-size:14px;line-height:1.75;color:var(--text-muted);font-family:'Inter';}
+  @media (max-width:900px){.trust-columns{grid-template-columns:1fr;}}
+
+  /* ============ CONTATO / FOOTER ============ */
+  #contato{background:var(--surface-dark);color:var(--text-on-dark);padding-bottom:0;}
+  #contato .section-head h2{color:var(--text-on-dark);}
+  .contact-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;padding-bottom:80px;border-bottom:1px solid var(--ink-line);}
+  .contact-links{display:grid;gap:1px;background:var(--ink-line);border:1px solid var(--ink-line);}
+  .contact-links a{
+    display:flex;align-items:center;justify-content:space-between;background:var(--ink-soft);
+    padding:20px 22px;transition:background .2s;
+  }
+  .contact-links a:hover{background:var(--ink-raised);}
+  .contact-links a b{font-weight:500;font-size:14px;display:block;font-family:'Inter';}
+  .contact-links a span{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-on-dark-muted);}
+  .contact-links a .icon{width:16px;height:16px;color:var(--signal);}
+
+  .cta-block{background:var(--ink-soft);border:1px solid var(--ink-line);padding:34px;}
+  .cta-block .mono{color:var(--signal);font-size:11px;letter-spacing:.08em;text-transform:uppercase;}
+  .cta-block h3{color:var(--text-on-dark);font-size:24px;margin:16px 0 12px;font-weight:400;}
+  .cta-block p{color:var(--text-on-dark-muted);font-size:14px;line-height:1.75;margin-bottom:26px;font-family:'Inter';}
+
+  .footer-bottom{
+    max-width:1180px;margin:0 auto;padding:26px 28px 32px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:12px;color:var(--text-on-dark-muted);font-family:'IBM Plex Mono',monospace;
+  }
+  .footer-brand{display:flex;align-items:center;gap:10px;}
+  .footer-brand img{width:20px;height:20px;border-radius:4px;}
+
+  /* ============ AGENT WIDGET ============ */
+  .agent-launcher{
+    position:fixed;right:26px;bottom:26px;z-index:300;
+    width:56px;height:56px;border-radius:50%;
+    background:var(--ink);border:1px solid var(--signal-dim);
+    display:flex;align-items:center;justify-content:center;color:var(--signal);
+    transition:background .2s,transform .2s var(--ease);
+  }
+  .agent-launcher::before{
+    content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(47,225,217,.4);
+    animation:agent-pulse 2.8s ease-out infinite;
+  }
+  @keyframes agent-pulse{0%{transform:scale(.85);opacity:.9;}80%{transform:scale(1.3);opacity:0;}100%{opacity:0;}}
+  .agent-launcher:hover{background:var(--ink-raised);transform:scale(1.05);}
+  .agent-launcher .icon{width:24px;height:24px;stroke-width:1.5;}
+  .agent-launcher .icon.close-icon{display:none;}
+  .agent-launcher.open .icon.chat-icon{display:none;}
+  .agent-launcher.open .icon.close-icon{display:block;}
+
+  .agent-panel{
+    position:fixed;right:26px;bottom:96px;z-index:299;
+    width:370px;max-width:calc(100vw - 40px);height:500px;max-height:calc(100vh - 150px);
+    background:var(--paper);border:1px solid var(--paper-line);
+    box-shadow:0 24px 60px rgba(12,14,17,.28);
+    display:flex;flex-direction:column;overflow:hidden;
+    transform:translateY(14px);opacity:0;pointer-events:none;
+    transition:transform .26s var(--ease),opacity .2s var(--ease);
+  }
+  .agent-panel.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .agent-head{background:var(--ink);color:var(--text-on-dark);padding:16px 18px;display:flex;align-items:center;gap:12px;}
+  .agent-head .dot{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 3px rgba(47,225,217,.25);}
+  .agent-head b{font-family:'IBM Plex Mono',monospace;font-size:13px;display:block;font-weight:500;}
+  .agent-head span{font-size:10.5px;color:var(--text-on-dark-muted);font-family:'IBM Plex Mono',monospace;}
+  .agent-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:14px;background:var(--paper-dim);}
+  .agent-msg{max-width:84%;padding:12px 14px;font-size:13.5px;line-height:1.55;font-family:'Inter';}
+  .agent-msg.bot{background:var(--paper);border:1px solid var(--paper-line);align-self:flex-start;color:var(--text-ink);}
+  .agent-msg.user{background:var(--ink);color:var(--text-on-dark);align-self:flex-end;}
+  .agent-foot{padding:14px;border-top:1px solid var(--paper-line);display:flex;gap:10px;background:var(--paper);}
+  .agent-foot input{
+    flex:1;border:1px solid var(--paper-line);padding:11px 13px;font-size:13.5px;font-family:'Inter';color:var(--text-ink);background:var(--paper);
+  }
+  .agent-foot input:focus{outline:none;border-color:var(--signal);}
+  .agent-foot button{
+    width:40px;height:40px;flex-shrink:0;background:var(--ink);color:var(--signal);
+    display:flex;align-items:center;justify-content:center;transition:background .2s;
+  }
+  .agent-foot button:hover{background:var(--ink-raised);}
+  .agent-foot button .icon{width:17px;height:17px;}
+
+  @media (max-width:480px){
+    .agent-panel{right:16px;left:16px;width:auto;bottom:88px;}
+    .agent-launcher{right:16px;bottom:16px;}
+  }
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (max-width:640px){
+    section{padding:80px 0;}
+    .wrap{padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Fixed neural pulse field — visible behind every section on the site -->
+<canvas id="neural-field"></canvas>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg style="display:none" aria-hidden="true">
+<defs>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="4.4"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-trace" viewBox="0 0 24 24"><path d="M4 12h4l2-6 4 12 2-6h4"/></symbol>
+  <symbol id="i-lock-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="2.6"/><path d="M5 6v6.5c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"/><path d="M5 12.5v5c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6v-5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v6c0 5-3.2 7.6-7 8.5-3.8-.9-7-3.5-7-8.5V6z"/><path d="M9 12.2l2 2 4-4.4"/></symbol>
+  <symbol id="i-scale-up" viewBox="0 0 24 24"><path d="M4 16 10 10l3.5 3.5L20 6"/><path d="M20 11V6h-5"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="14" cy="9" r="2"/><circle cx="14" cy="16" r="2"/><circle cx="20" cy="12" r="1.6"/><path d="M7.7 6.7 12.3 9M7.7 11.3 12.3 9.6M7.7 12.7 12.3 15.4M7.7 17.3 12.3 16.6M15.7 9.7 18.5 11.4M15.7 15.3 18.5 12.6"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M9 17h11"/><circle cx="14" cy="7" r="2.2"/><circle cx="7" cy="17" r="2.2"/></symbol>
+  <symbol id="i-search-doc" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4v9.5a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1z"/><path d="M14 3.5V8h4"/><circle cx="10.6" cy="13.6" r="2.4"/><path d="M12.4 15.4 14.5 17.5"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3.5 20 8v8l-8 4.5-8-4.5V8z"/><path d="M4 8l8 4.5 8-4.5M12 12.5V21"/></symbol>
+  <symbol id="i-pipeline" viewBox="0 0 24 24"><rect x="3" y="10" width="4.4" height="4.4" rx="1"/><rect x="10" y="4.5" width="4.4" height="4.4" rx="1"/><rect x="10" y="15.5" width="4.4" height="4.4" rx="1"/><rect x="17" y="10" width="4.4" height="4.4" rx="1"/><path d="M7.4 12.2h2.6M12.2 8.7v2.1M12.2 15.3v-2.1M14.4 12.2h2.6"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 15a8 8 0 1 1 16 0"/><path d="M12 15l4-5"/><path d="M12 15h.01"/></symbol>
+  <symbol id="i-human-check" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M4 19c0-3.6 2.4-6 5-6s5 2.4 5 6"/><path d="M15.5 15.5l2 2 3-3.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="6.5" y="12" width="3" height="6"/><rect x="11.5" y="8" width="3" height="10"/><rect x="16.5" y="5" width="3" height="13"/></symbol>
+  <symbol id="i-gavel" viewBox="0 0 24 24"><path d="M14 4l6 6-2.2 2.2-6-6z"/><path d="M9.8 8.2 15.8 14.2"/><path d="M4 20h9"/><path d="M6.5 17.5 4 20l2.5 2.5"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M12 4 2 9l10 5 10-5z"/><path d="M6 11.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5 12 22.5l9-5"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M4 12h3l2-6 4 12 2-8 1.5 2H20"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M9 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/><path d="M14 4h6v6"/><path d="M20 4 11 13"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8A2.5 2.5 0 0 1 17.5 16H10l-5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5z"/><circle cx="8.5" cy="9.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="9.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9.5" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-6 16-3-6z"/><path d="M20 4 11 13"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1z"/><path d="M14 3.5V8h4M8.5 12h7M8.5 15.3h7M8.5 18.5h4"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="6.5" rx="1.4"/><rect x="3.5" y="13.5" width="17" height="6.5" rx="1.4"/><circle cx="7" cy="7.2" r=".9" fill="currentColor" stroke="none"/><circle cx="7" cy="16.7" r=".9" fill="currentColor" stroke="none"/></symbol>
+</defs>
+</svg>
+
+<!-- ============ NAVBAR ============ -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="data:image/png;base64,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b8vL7h1noHhnwtOH8VahHfXkfP8AZdid6ofSRxxn2FNml1f4i3fk2qRaZ4fsein5Le2Hqcfef25NZrab4f8ADrY1W4/tjUFPNjZSbYI29JJerH2T867LRPBvinx15Dar/wASXw/H/qrWGPyht9ET3/vNz9aq63Y3B393+v6/pD/ht4dh1vxRHc2sTDQNEkJikcfNd3OMb29x1x0AwPWvd6paRpNloemQadp0CwW0K4RF/Uk9yfWrtctSfMzphHlWoUUUVBYUUUUAFFFFABRRRQAUUUUAFFFFAHzjr0Enhy58eyopW4nuorKIgYIjmJdsfVVA/GnQ6HqEMkHgjw6gXVLmFZtavAceWGAIi3DlUUEZA5JOK9H+IfhgXU9vqaJmF7yzN0o9Ek2hv++XI/AVqfD7RfsWn32r3K51DVruW4mc9Qm8hF+gHP410e0925ioWdkR+EvhjoPhaOOXyFvdQUc3M6g4P+wvRR+vvXa0UVhKTk7s1SS2CiiikMKKKKACiiigAooooAKKKKACiiigAooooAZLFHNG0cqK6N1VhkGljjWJAiKFUdAO1OooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==" alt="Logo SynapseAI Solutions">
+      <span class="brand-word">Synapse<span>AI</span></span>
+    </a>
+    <nav class="primary-links" id="primaryLinks">
+      <a href="#top" class="nav-link">Início</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#visao" class="nav-link">Visão</a>
+      <a href="#tecnologia" class="nav-link">Tecnologia</a>
+      <a href="#produtos" class="nav-link">Produtos</a>
+      <a href="#confianca" class="nav-link">Confiança</a>
+      <a href="#contato" class="nav-cta">[ Fale com o time ]</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <svg class="icon"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+  <div class="mobile-progress"><i id="mobileProgress"></i></div>
+</header>
+
+<!-- ============ SYNAPSE RAIL ============ -->
+<div class="synapse-rail" aria-hidden="true">
+  <div class="track">
+    <div class="signal" id="railSignal"></div>
+    <div class="nodes" id="railNodes"></div>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero on-dark" id="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-kicker">01 — IA generativa orientada a domínio</span>
+        <h1>Inteligência artificial que aprende a <em>linguagem</em> do seu setor.</h1>
+        <p class="sub">A SynapseAI Solutions constrói produtos corporativos de IA generativa para Finanças, Educação e Saúde — sistemas explicáveis, auditáveis e integrados aos seus dados privados, projetados para ampliar a capacidade cognitiva de profissionais e organizações, nunca para substituir o julgamento humano.</p>
+        <div class="ctas">
+          <a href="#produtos" class="btn btn-primary"><svg class="icon" style="width:16px;height:16px"><use href="#i-arrow-right"/></svg>Conheça os produtos</a>
+          <a href="#contato" class="btn btn-ghost">Fale com nosso time</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>03</b><span>Verticais de domínio — Finanças, Educação e Saúde</span></div>
+          <div class="stat"><b>05</b><span>Produtos de IA generativa em produção</span></div>
+          <div class="stat"><b>300</b><span>Colaboradores dedicados à operação</span></div>
+          <div class="stat"><b>100%</b><span>Respostas explicáveis e rastreáveis</span></div>
+        </div>
+      </div>
+      <div class="hero-console bracketed">
+        <div class="console-head"><i></i>arquitetura_em_execução.log</div>
+        <div class="console-body">
+          <div class="console-line">
+            <span class="ln">01</span>
+            <svg class="icon"><use href="#i-search-doc"/></svg>
+            <div><b>RAG sobre dados privados</b><span>Respostas fundamentadas nas fontes internas do cliente</span></div>
+          </div>
+          <div class="console-line">
+            <span class="ln">02</span>
+            <svg class="icon"><use href="#i-shield"/></svg>
+            <div><b>Isolamento por cliente</b><span>Bancos vetoriais e tenants segregados, com criptografia</span></div>
+          </div>
+          <div class="console-line">
+            <span class="ln">03</span>
+            <svg class="icon"><use href="#i-gauge"/></svg>
+            <div><b>Observabilidade de IA</b><span>Métricas de qualidade, latência e drift em tempo real</span></div>
+          </div>
+          <div class="console-line">
+            <span class="ln">04</span>
+            <svg class="icon"><use href="#i-human-check"/></svg>
+            <div><b>Human-in-the-loop</b><span>Decisão final sempre nas mãos do profissional</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre">
+    <div class="wrap about-grid reveal">
+      <div>
+        <span class="tag">Contexto institucional</span>
+        <h2 style="font-size:clamp(28px,3.4vw,38px);margin-bottom:26px;">Verticalização tecnológica em vez de IA genérica</h2>
+        <p>A <strong>SynapseAI Solutions</strong> é uma empresa especializada no desenvolvimento de produtos corporativos baseados em Inteligência Artificial Generativa, com foco em aplicações de alto impacto nos setores de Finanças, Educação e Saúde.</p>
+        <p>Diferentemente de abordagens genéricas de IA generativa, a SynapseAI adota um modelo de <strong>verticalização tecnológica</strong>, no qual cada produto é construído a partir de uma profunda compreensão do contexto operacional, regulatório e semântico do setor em que será aplicado — permitindo maior precisão, confiabilidade, explicabilidade e alinhamento com processos reais de negócio.</p>
+        <p>A empresa tem como princípio central o uso <strong>responsável, seguro e auditável</strong> da IA, garantindo conformidade com legislações como a LGPD, além de boas práticas internacionais de governança, privacidade e segurança da informação.</p>
+      </div>
+      <aside class="about-side bracketed">
+        <span class="mono">Missão</span>
+        <h3>Ampliar a capacidade cognitiva de profissionais e organizações</h3>
+        <p style="color:var(--text-on-dark-muted);font-size:14px;line-height:1.7;font-family:'Inter';">Utilizando IA generativa como um sistema de apoio à decisão — e não como substituto do julgamento humano.</p>
+        <ul style="margin-top:22px;">
+          <li><svg class="icon"><use href="#i-target"/></svg>Especialização real por domínio regulatório</li>
+          <li><svg class="icon"><use href="#i-trace"/></svg>Explicabilidade e rastreabilidade em toda resposta</li>
+          <li><svg class="icon"><use href="#i-shield"/></svg>Compliance com LGPD desde a concepção</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ VISÃO / PILARES ============ -->
+  <section id="visao">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Visão e proposta de valor</span>
+        <h2>Cinco pilares sustentam cada produto SynapseAI</h2>
+        <p class="lede">Toda decisão de arquitetura — de modelo a deploy — é orientada por estes princípios, comuns a FinBrain, RiskGen, EduMentor AI, CourseGen Studio e ClinicaGPT.</p>
+      </div>
+      <div class="pillars reveal">
+        <article class="pillar-card">
+          <div class="pillar-num mono">P. 01</div>
+          <svg class="icon pillar-icon"><use href="#i-target"/></svg>
+          <h4>Especialização por domínio</h4>
+          <p>Modelos de IA ajustados especificamente para finanças, educação e saúde, evitando respostas genéricas ou superficiais.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-num mono">P. 02</div>
+          <svg class="icon pillar-icon"><use href="#i-trace"/></svg>
+          <h4>IA explicável e rastreável</h4>
+          <p>Todas as respostas geradas pelos sistemas podem ser explicadas, auditadas e vinculadas a fontes de dados confiáveis.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-num mono">P. 03</div>
+          <svg class="icon pillar-icon"><use href="#i-lock-data"/></svg>
+          <h4>Integração com dados privados</h4>
+          <p>Os produtos operam prioritariamente sobre dados internos do cliente, utilizando técnicas como RAG (Retrieval-Augmented Generation).</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-num mono">P. 04</div>
+          <svg class="icon pillar-icon"><use href="#i-shield"/></svg>
+          <h4>Compliance desde a concepção</h4>
+          <p>Arquiteturas desenhadas para ambientes regulados, com isolamento por cliente, criptografia e controle de acesso rigoroso.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-num mono">P. 05</div>
+          <svg class="icon pillar-icon"><use href="#i-scale-up"/></svg>
+          <h4>Escalabilidade enterprise</h4>
+          <p>Soluções prontas para milhares de usuários, com SLAs elevados e suporte a deploy em cloud privada ou on-premise.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECNOLOGIA ============ -->
+  <section id="tecnologia" class="on-dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Fundamentos tecnológicos</span>
+        <h2>Uma arquitetura moderna e modular de IA generativa</h2>
+        <p class="lede">Compartilhada entre todos os produtos — cada solução adiciona camadas específicas de negócio, regras de segurança e guardrails próprios, de acordo com o risco do domínio.</p>
+      </div>
+      <div class="tech-grid reveal">
+        <div class="tech-item"><svg class="icon"><use href="#i-brain"/></svg><h4>LLMs open-source e proprietários</h4><p>Modelos de linguagem selecionados conforme a exigência técnica e regulatória de cada domínio.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-sliders"/></svg><h4>Fine-tuning supervisionado</h4><p>Adaptação semântica por domínio, refinando vocabulário e contexto de cada setor.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-search-doc"/></svg><h4>RAG sobre bases privadas</h4><p>Retrieval-Augmented Generation ancorado nos dados internos e documentos do cliente.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-cube"/></svg><h4>Bancos vetoriais isolados</h4><p>Isolamento por cliente para garantir segregação total de dados sensíveis.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-pipeline"/></svg><h4>Pipelines de dados</h4><p>Ingestão, versionamento e curadoria contínua das bases de conhecimento.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-gauge"/></svg><h4>Observabilidade de IA</h4><p>Métricas de qualidade, latência e drift semântico monitoradas continuamente.</p></div>
+        <div class="tech-item"><svg class="icon"><use href="#i-human-check"/></svg><h4>Human-in-the-loop</h4><p>Revisão e validação humana embutidas nos cenários mais críticos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUTOS ============ -->
+  <section id="produtos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Portfólio de produtos</span>
+        <h2>Cinco copilotos, um mesmo padrão de confiança</h2>
+        <p class="lede">Cada produto atende um domínio específico, mas compartilha os mesmos princípios de explicabilidade, segurança e apoio — nunca substituição — à decisão humana.</p>
+      </div>
+
+      <div class="product-index" role="tablist" aria-label="Produtos SynapseAI">
+        <button class="product-tab active" data-tab="finbrain" role="tab" aria-selected="true"><span class="idx">01</span><svg class="icon"><use href="#i-chart"/></svg>FinBrain</button>
+        <button class="product-tab" data-tab="riskgen" role="tab" aria-selected="false"><span class="idx">02</span><svg class="icon"><use href="#i-gavel"/></svg>RiskGen</button>
+        <button class="product-tab" data-tab="edumentor" role="tab" aria-selected="false"><span class="idx">03</span><svg class="icon"><use href="#i-grad"/></svg>EduMentor AI</button>
+        <button class="product-tab" data-tab="coursegen" role="tab" aria-selected="false"><span class="idx">04</span><svg class="icon"><use href="#i-layers"/></svg>CourseGen Studio</button>
+        <button class="product-tab" data-tab="clinicagpt" role="tab" aria-selected="false"><span class="idx">05</span><svg class="icon"><use href="#i-pulse"/></svg>ClinicaGPT</button>
+      </div>
+
+      <!-- FinBrain -->
+      <div class="product-panel active" id="panel-finbrain" role="tabpanel">
+        <div class="product-layout">
+          <div>
+            <div class="product-head">
+              <div class="tagline">Copiloto Financeiro Corporativo</div>
+              <h3>FinBrain</h3>
+            </div>
+            <p class="product-desc">O FinBrain é um copiloto de IA generativa especializado em finanças corporativas, projetado para apoiar profissionais financeiros na análise, interpretação e comunicação de informações financeiras complexas. Ele transforma grandes volumes de dados estruturados em insights claros, explicáveis e acionáveis sobre EBITDA, margem, fluxo de caixa, orçamento e projeções — sempre atuando como copiloto, com a decisão final nas mãos dos profissionais.</p>
+            <ul class="diff-list">
+              <li>Redução do tempo de análise financeira</li>
+              <li>Comunicação executiva clara e padronizada</li>
+              <li>Apoio à tomada de decisão estratégica</li>
+              <li>Alta confiabilidade e rastreabilidade</li>
+            </ul>
+            <a href="https://finbrain.synapseai.com" class="product-link" target="_blank" rel="noopener">Acessar FinBrain <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="tech-card bracketed">
+            <div class="mono-label">Detalhes técnicos</div>
+            <dl>
+              <div class="spec-row"><dt>Modelo</dt><dd>LLM financeiro/contábil</dd></div>
+              <div class="spec-row"><dt>Abordagem</dt><dd>RAG sobre dados internos</dd></div>
+              <div class="spec-row"><dt>Fontes de dados</dt><dd>ERP, DW, planilhas, PDFs</dd></div>
+              <div class="spec-row"><dt>Integrações</dt><dd>API REST/GraphQL, BI</dd></div>
+              <div class="spec-row"><dt>Segurança</dt><dd>Isolamento por tenant</dd></div>
+              <div class="spec-row"><dt>Deploy</dt><dd>Cloud privada / on-premise</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- RiskGen -->
+      <div class="product-panel" id="panel-riskgen" role="tabpanel">
+        <div class="product-layout">
+          <div>
+            <div class="product-head">
+              <div class="tagline">Inteligência para Risco, Compliance e Auditoria</div>
+              <h3>RiskGen</h3>
+            </div>
+            <p class="product-desc">O RiskGen automatiza e padroniza análises de risco regulatório, compliance e auditoria corporativa, lendo e comparando contratos, políticas internas e normas regulatórias extensas. Cada risco identificado vem acompanhado de evidências textuais e classificação de severidade, com trilhas de auditoria imutáveis — o RiskGen não substitui equipes jurídicas ou de compliance, mas reduz o esforço operacional e o risco de falhas humanas.</p>
+            <ul class="diff-list">
+              <li>Aceleração de análises regulatórias</li>
+              <li>Redução de riscos legais e operacionais</li>
+              <li>Padronização de pareceres técnicos</li>
+              <li>Preparação facilitada para auditorias</li>
+            </ul>
+            <a href="https://riskgen.synapseai.com" class="product-link" target="_blank" rel="noopener">Acessar RiskGen <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="tech-card bracketed">
+            <div class="mono-label">Detalhes técnicos</div>
+            <dl>
+              <div class="spec-row"><dt>Modelo</dt><dd>LLM jurídico/regulatório</dd></div>
+              <div class="spec-row"><dt>Abordagem</dt><dd>RAG documental versionado</dd></div>
+              <div class="spec-row"><dt>Capacidade</dt><dd>Docs. &gt;500 páginas</dd></div>
+              <div class="spec-row"><dt>Auditoria</dt><dd>Logs imutáveis</dd></div>
+              <div class="spec-row"><dt>Segurança</dt><dd>Acesso rígido</dd></div>
+              <div class="spec-row"><dt>Deploy</dt><dd>Cloud privada / on-premise</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- EduMentor AI -->
+      <div class="product-panel" id="panel-edumentor" role="tabpanel">
+        <div class="product-layout">
+          <div>
+            <div class="product-head">
+              <div class="tagline">Tutor Educacional Inteligente e Personalizado</div>
+              <h3>EduMentor AI</h3>
+            </div>
+            <p class="product-desc">O EduMentor AI oferece aprendizado personalizado, adaptativo e contínuo, ajustando nível de dificuldade, profundidade das explicações e forma de apresentação do conteúdo com base no histórico e no desempenho de cada aluno. Aplicável em educação formal e corporativa, integra-se a plataformas LMS existentes como uma camada inteligente — complementando professores e instrutores, sem substituí-los.</p>
+            <ul class="diff-list">
+              <li>Aprendizado personalizado em escala</li>
+              <li>Melhoria do engajamento e retenção</li>
+              <li>Apoio contínuo ao aluno</li>
+              <li>Integração com ambientes educacionais existentes</li>
+            </ul>
+            <a href="https://edumentor.synapseai.com" class="product-link" target="_blank" rel="noopener">Acessar EduMentor AI <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="tech-card bracketed">
+            <div class="mono-label">Detalhes técnicos</div>
+            <dl>
+              <div class="spec-row"><dt>Modelo</dt><dd>LLM educacional</dd></div>
+              <div class="spec-row"><dt>Abordagem</dt><dd>RAG institucional</dd></div>
+              <div class="spec-row"><dt>Integrações</dt><dd>LMS via API</dd></div>
+              <div class="spec-row"><dt>Escala</dt><dd>Milhares de alunos</dd></div>
+              <div class="spec-row"><dt>Privacidade</dt><dd>LGPD, perfil de acesso</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- CourseGen Studio -->
+      <div class="product-panel" id="panel-coursegen" role="tabpanel">
+        <div class="product-layout">
+          <div>
+            <div class="product-head">
+              <div class="tagline">Geração Assistida de Conteúdo Educacional</div>
+              <h3>CourseGen Studio</h3>
+            </div>
+            <p class="product-desc">O CourseGen Studio acelera a produção de cursos completos — ementas, planos de aula, materiais didáticos e avaliações — mantendo coerência pedagógica e alinhamento institucional. O conteúdo pode ser alinhado a taxonomias educacionais, como a Taxonomia de Bloom, e é totalmente editável, versionável e exportável, atuando como acelerador de produtividade sem eliminar a curadoria humana.</p>
+            <ul class="diff-list">
+              <li>Redução drástica do tempo de criação de cursos</li>
+              <li>Padronização pedagógica</li>
+              <li>Escalabilidade para L&amp;D e universidades</li>
+              <li>Preservação da autoria e curadoria humana</li>
+            </ul>
+            <a href="https://coursegen.synapseai.com" class="product-link" target="_blank" rel="noopener">Acessar CourseGen Studio <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="tech-card bracketed">
+            <div class="mono-label">Detalhes técnicos</div>
+            <dl>
+              <div class="spec-row"><dt>Modelo</dt><dd>LLM + templates</dd></div>
+              <div class="spec-row"><dt>Abordagem</dt><dd>Prompting + RAG</dd></div>
+              <div class="spec-row"><dt>Alinhamento</dt><dd>Taxonomia de Bloom</dd></div>
+              <div class="spec-row"><dt>Exportação</dt><dd>PDF, PPTX, HTML, SCORM</dd></div>
+              <div class="spec-row"><dt>Deploy</dt><dd>SaaS / cloud privada</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- ClinicaGPT -->
+      <div class="product-panel" id="panel-clinicagpt" role="tabpanel">
+        <div class="product-layout">
+          <div>
+            <div class="product-head">
+              <div class="tagline">Assistente Clínico de Apoio à Decisão</div>
+              <h3>ClinicaGPT</h3>
+            </div>
+            <p class="product-desc">O ClinicaGPT apoia profissionais de saúde na organização e interpretação de informações clínicas, resumindo prontuários, evoluções e resultados de exames, além de dar acesso rápido a protocolos e diretrizes médicas. Opera estritamente como sistema de apoio à decisão — não realiza diagnósticos nem prescrições — sendo projetado para ambientes hospitalares críticos, com altos requisitos de disponibilidade e conformidade regulatória.</p>
+            <ul class="diff-list">
+              <li>Redução do tempo administrativo</li>
+              <li>Acesso rápido a informações clínicas relevantes</li>
+              <li>Maior segurança e padronização</li>
+              <li>Projetado para ambientes hospitalares críticos</li>
+            </ul>
+            <a href="https://clinicagpt.synapseai.com" class="product-link" target="_blank" rel="noopener">Acessar ClinicaGPT <svg class="icon"><use href="#i-external"/></svg></a>
+          </div>
+          <div class="tech-card bracketed">
+            <div class="mono-label">Detalhes técnicos</div>
+            <dl>
+              <div class="spec-row"><dt>Modelo</dt><dd>LLM clínico com guardrails</dd></div>
+              <div class="spec-row"><dt>Abordagem</dt><dd>RAG sobre protocolos</dd></div>
+              <div class="spec-row"><dt>Limites</dt><dd>Não diagnostica/prescreve</dd></div>
+              <div class="spec-row"><dt>Compliance</dt><dd>LGPD / HIPAA-like</dd></div>
+              <div class="spec-row"><dt>Disponibilidade</dt><dd>SLA hospitalar</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CONFIANÇA ============ -->
+  <section id="confianca">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Por que SynapseAI</span>
+        <h2>Confiança construída em escala enterprise</h2>
+        <p class="lede">Uma operação estruturada para atender contratos rigorosos com hospitais, bancos e instituições de ensino — com SLAs claros e observabilidade dedicada a sistemas de IA generativa.</p>
+      </div>
+
+      <div class="trust-grid reveal">
+        <div class="trust-stat"><b>300</b><span>Colaboradores em 7 áreas especializadas</span></div>
+        <div class="trust-stat"><b>60</b><span>Profissionais dedicados a IA &amp; Dados</span></div>
+        <div class="trust-stat"><b>24/7</b><span>Plantão para ClinicaGPT e FinBrain</span></div>
+        <div class="trust-stat"><b>N1–N3</b><span>Estrutura escalonada de suporte técnico</span></div>
+      </div>
+
+      <table class="sla-table reveal">
+        <thead>
+          <tr><th>Severidade</th><th>Descrição</th><th>Primeira resposta</th><th>Resolução</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="sev-tag sev-1">S1</span>Crítica</td><td>Interrupção total do sistema</td><td class="mono">&lt; 15 min (24/7)</td><td class="mono">&lt; 4 horas</td></tr>
+          <tr><td><span class="sev-tag sev-2">S2</span>Alta</td><td>Degradação severa de funcionalidade crítica</td><td class="mono">&lt; 1 hora</td><td class="mono">&lt; 8 horas</td></tr>
+          <tr><td><span class="sev-tag sev-3">S3</span>Média</td><td>Impacto parcial, bugs não impeditivos</td><td class="mono">&lt; 4 horas</td><td class="mono">&lt; 48 horas</td></tr>
+          <tr><td><span class="sev-tag sev-4">S4</span>Baixa</td><td>Dúvidas e configurações</td><td class="mono">&lt; 12 horas</td><td class="mono">Até 5 dias úteis</td></tr>
+        </tbody>
+      </table>
+
+      <div class="trust-columns reveal">
+        <div class="trust-col">
+          <h4>Observabilidade específica de IA generativa</h4>
+          <p>Como a SynapseAI trabalha com LLMs e RAG, o suporte monitora métricas que não existem em software tradicional: taxa de escalonamento por alucinação, latência de inferência do RAG e feedback direto no produto (polegar para cima/baixo), acionando a equipe de IA antes mesmo da abertura de um chamado.</p>
+        </div>
+        <div class="trust-col">
+          <h4>Segurança e conformidade por padrão</h4>
+          <p>Isolamento por tenant, criptografia e controle de acesso por perfil em todos os produtos, com trilhas de auditoria imutáveis. Conformidade com a LGPD e princípios equivalentes a HIPAA nos produtos que lidam com dados de saúde, sustentados por um time dedicado de Segurança, Jurídico &amp; Compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO / FOOTER ============ -->
+  <section id="contato" class="on-dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="tag">Contato</span>
+        <h2>Fale com o time SynapseAI</h2>
+        <p class="lede">Acesse a documentação, o console administrativo ou converse com nosso time comercial para conhecer o produto certo para o seu setor.</p>
+      </div>
+      <div class="contact-panel reveal">
+        <div class="contact-links">
+          <a href="https://www.synapseai.com" target="_blank" rel="noopener"><span><b>Site institucional</b><span>www.synapseai.com</span></span><svg class="icon"><use href="#i-external"/></svg></a>
+          <a href="https://docs.synapseai.com" target="_blank" rel="noopener"><span><b>Documentação geral</b><span>docs.synapseai.com</span></span><svg class="icon"><use href="#i-doc"/></svg></a>
+          <a href="https://admin.synapseai.com" target="_blank" rel="noopener"><span><b>Console administrativo global</b><span>admin.synapseai.com</span></span><svg class="icon"><use href="#i-server"/></svg></a>
+          <a href="https://api.synapseai.com" target="_blank" rel="noopener"><span><b>API Gateway central</b><span>api.synapseai.com</span></span><svg class="icon"><use href="#i-cube"/></svg></a>
+        </div>
+        <div class="cta-block bracketed">
+          <span class="mono">Vamos conversar</span>
+          <h3>Pronto para levar IA especializada ao seu setor?</h3>
+          <p>Nosso time de Engenharia de Soluções pode desenhar uma prova de conceito com os dados da sua organização, respeitando isolamento e conformidade desde o primeiro dia.</p>
+          <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="document.getElementById('agentLauncher').click();return false;">Iniciar conversa com o assistente</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <img src="data:image/png;base64,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b8vL7h1noHhnwtOH8VahHfXkfP8AZdid6ofSRxxn2FNml1f4i3fk2qRaZ4fsein5Le2Hqcfef25NZrab4f8ADrY1W4/tjUFPNjZSbYI29JJerH2T867LRPBvinx15Dar/wASXw/H/qrWGPyht9ET3/vNz9aq63Y3B393+v6/pD/ht4dh1vxRHc2sTDQNEkJikcfNd3OMb29x1x0AwPWvd6paRpNloemQadp0CwW0K4RF/Uk9yfWrtctSfMzphHlWoUUUVBYUUUUAFFFFABRRRQAUUUUAFFFFAHzjr0Enhy58eyopW4nuorKIgYIjmJdsfVVA/GnQ6HqEMkHgjw6gXVLmFZtavAceWGAIi3DlUUEZA5JOK9H+IfhgXU9vqaJmF7yzN0o9Ek2hv++XI/AVqfD7RfsWn32r3K51DVruW4mc9Qm8hF+gHP410e0925ioWdkR+EvhjoPhaOOXyFvdQUc3M6g4P+wvRR+vvXa0UVhKTk7s1SS2CiiikMKKKKACiiigAooooAKKKKACiiigAooooAZLFHNG0cqK6N1VhkGljjWJAiKFUdAO1OooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==" alt="Logo SynapseAI Solutions">
+          <span>© <span id="year"></span> SynapseAI Solutions</span>
+        </div>
+        <span>IA generativa vertical para Finanças, Educação e Saúde.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ AGENT WIDGET ============ -->
+<button class="agent-launcher" id="agentLauncher" aria-label="Abrir assistente SynapseAI" aria-expanded="false">
+  <svg class="icon chat-icon"><use href="#i-chat"/></svg>
+  <svg class="icon close-icon"><use href="#i-close"/></svg>
+</button>
+
+<div class="agent-panel" id="agentPanel" role="dialog" aria-label="Assistente SynapseAI" aria-hidden="true">
+  <div class="agent-head">
+    <span class="dot"></span>
+    <div><b>Assistente SynapseAI</b><span>FinBrain · RiskGen · EduMentor · CourseGen · ClinicaGPT</span></div>
+  </div>
+  <div class="agent-body" id="agentBody">
+    <div class="agent-msg bot">Olá! Sou o assistente virtual da SynapseAI Solutions. Posso te ajudar a entender qual produto melhor se encaixa no seu setor — Finanças, Educação ou Saúde. Como posso ajudar?</div>
+  </div>
+  <div class="agent-foot">
+    <input type="text" id="agentInput" placeholder="Escreva sua pergunta..." aria-label="Mensagem para o assistente">
+    <button id="agentSend" aria-label="Enviar mensagem"><svg class="icon"><use href="#i-send"/></svg></button>
+  </div>
+</div>
+<!-- TODO: integrar endpoint do agente de IA aqui. Este painel é apenas a interface (UI/UX);
+     a lógica de conversação real (chamada ao modelo, histórico, autenticação) deve ser
+     conectada em handleAgentMessage() abaixo. -->
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile nav ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var primaryLinks = document.getElementById('primaryLinks');
+  navToggle.addEventListener('click', function(){
+    var open = primaryLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  primaryLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      primaryLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* ---------- Product tabs ---------- */
+  var tabs = document.querySelectorAll('.product-tab');
+  var panels = document.querySelectorAll('.product-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+      panels.forEach(function(p){p.classList.remove('active');});
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  /* ---------- Synapse rail + mobile progress ---------- */
+  var sectionEls = Array.prototype.slice.call(document.querySelectorAll('main > section'));
+  var railNodesWrap = document.getElementById('railNodes');
+  var railSignal = document.getElementById('railSignal');
+  var mobileProgress = document.getElementById('mobileProgress');
+  var railNodeEls = [];
+
+  sectionEls.forEach(function(sec, i){
+    var pct = i / (sectionEls.length - 1) * 100;
+    var node = document.createElement('div');
+    node.className = 'rail-node';
+    node.style.top = pct + '%';
+    node.setAttribute('tabindex','0');
+    node.setAttribute('role','link');
+    node.setAttribute('aria-label','Ir para ' + (sec.id || 'seção'));
+    node.addEventListener('click', function(){ sec.scrollIntoView({behavior:'smooth'}); });
+    node.addEventListener('keypress', function(e){ if(e.key==='Enter') sec.scrollIntoView({behavior:'smooth'}); });
+    var label = document.createElement('span');
+    label.className = 'rail-label';
+    label.textContent = (sec.id || '').charAt(0).toUpperCase() + (sec.id || '').slice(1);
+    node.appendChild(label);
+    railNodesWrap.appendChild(node);
+    railNodeEls.push(node);
+  });
+
+  function onScroll(){
+    var doc = document.documentElement;
+    var scrollTop = doc.scrollTop || document.body.scrollTop;
+    var scrollHeight = doc.scrollHeight - doc.clientHeight;
+    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    railSignal.style.height = pct + '%';
+    mobileProgress.style.width = pct + '%';
+
+    var mid = scrollTop + window.innerHeight * 0.4;
+    var activeIdx = 0;
+    sectionEls.forEach(function(sec, i){ if (sec.offsetTop <= mid) activeIdx = i; });
+    railNodeEls.forEach(function(n, i){ n.classList.toggle('active', i === activeIdx); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ================================================================
+     GLOBAL NEURAL FIELD — a mouse-reactive synapse simulation.
+     Fixed "home" positions form a neuron graph (soma + dendrite
+     curves). Every node is nudged by a damped spring physics system:
+     the pointer pushes nearby nodes out of place like a real field
+     disturbance, and they ease back to rest when released. Discrete
+     pulses are born at a node, travel an edge, and make the arrival
+     node "fire" — sometimes cascading onward — while moving the
+     cursor itself fires nearby neurons and clicking triggers a burst,
+     so the whole field reads as something the visitor is touching,
+     not a looping background video.
+     ================================================================ */
+  var canvas = document.getElementById('neural-field');
+  var ctx = canvas.getContext('2d');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var W, H, nodes = [], edges = [], pulses = [];
+  var MAX_PULSES = 30;
+  var mouse = {x:-9999, y:-9999, active:false, lastFireX:-9999, lastFireY:-9999};
+
+  function buildNetwork(){
+    W = canvas.width = Math.floor(window.innerWidth * DPR);
+    H = canvas.height = Math.floor(window.innerHeight * DPR);
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+
+    nodes = []; edges = []; pulses = [];
+    var cols = Math.max(5, Math.round(window.innerWidth / 190));
+    var rows = Math.max(4, Math.round(window.innerHeight / 190));
+    var jitter = 0.38;
+
+    for (var r = 0; r <= rows; r++){
+      for (var c = 0; c <= cols; c++){
+        var x = (c / cols) * W + (Math.random()-.5) * jitter * (W/cols);
+        var y = (r / rows) * H + (Math.random()-.5) * jitter * (H/rows);
+        var isSoma = Math.random() < 0.16;
+        nodes.push({
+          x0:x, y0:y,                 /* home position (graph layout) */
+          x:x, y:y,                   /* current rendered position */
+          ox:0, oy:0, vx:0, vy:0,     /* spring offset + velocity */
+          phase: Math.random()*Math.PI*2,
+          r: (isSoma ? 3.2+Math.random()*1.4 : 1.5+Math.random()*1.3) * DPR,
+          soma: isSoma,
+          flash:0, edges:[]
+        });
+      }
+    }
+
+    /* connect each node to its 2-3 nearest neighbours only, to read
+       as a designed neural graph rather than a dense particle mesh */
+    nodes.forEach(function(n, i){
+      var dists = nodes.map(function(o, j){
+        if (i===j) return null;
+        var dx=n.x0-o.x0, dy=n.y0-o.y0;
+        return {j:j, d:Math.sqrt(dx*dx+dy*dy)};
+      }).filter(Boolean).sort(function(a,b){return a.d-b.d;});
+      var linkCount = 2 + (Math.random() < .35 ? 1 : 0);
+      for (var k=0;k<linkCount && k<dists.length;k++){
+        var j = dists[k].j;
+        var exists = edges.some(function(e){return (e.a===i&&e.b===j)||(e.a===j&&e.b===i);});
+        if (!exists && dists[k].d < Math.max(W,H) * 0.32){
+          edges.push({a:i, b:j, k: 0.10 + Math.random()*0.08, glow:0});
+        }
+      }
+    });
+    edges.forEach(function(e, idx){ nodes[e.a].edges.push(idx); nodes[e.b].edges.push(idx); });
+  }
+
+  /* current (post-physics) control point for edge e, recomputed live
+     so curves stay attached correctly while nodes drift under the cursor */
+  function edgeControl(e){
+    var a = nodes[e.a], b = nodes[e.b];
+    return {
+      x: (a.x+b.x)/2 + (b.y-a.y) * e.k,
+      y: (a.y+b.y)/2 - (b.x-a.x) * e.k
+    };
+  }
+  function pointOnEdge(e, t){
+    var a = nodes[e.a], b = nodes[e.b];
+    var c = edgeControl(e);
+    var x = (1-t)*(1-t)*a.x + 2*(1-t)*t*c.x + t*t*b.x;
+    var y = (1-t)*(1-t)*a.y + 2*(1-t)*t*c.y + t*t*b.y;
+    return {x:x, y:y};
+  }
+
+  function spawnPulse(fromNodeIdx, depth, forceEdge){
+    if (pulses.length >= MAX_PULSES) return;
+    var node = nodes[fromNodeIdx];
+    if (!node.edges.length) return;
+    var edgeIdx = (forceEdge !== undefined) ? forceEdge : node.edges[Math.floor(Math.random()*node.edges.length)];
+    var e = edges[edgeIdx];
+    var reversed = (e.b === fromNodeIdx);
+    pulses.push({
+      edgeIdx: edgeIdx, t: 0, reversed: reversed,
+      speed: 0.007 + Math.random()*0.007,
+      warm: Math.random() < 0.18,
+      depth: depth || 0
+    });
+  }
+
+  function ambientSpawn(){
+    if (!nodes.length) return;
+    spawnPulse(Math.floor(Math.random()*nodes.length), 0);
+  }
+  setInterval(function(){ if(!reduceMotion) ambientSpawn(); }, 650);
+
+  function nearestNode(px, py){
+    var best = -1, bestD = Infinity;
+    nodes.forEach(function(n, i){
+      var dx = n.x-px, dy = n.y-py, d = dx*dx+dy*dy;
+      if (d < bestD){ bestD = d; best = i; }
+    });
+    return best;
+  }
+
+  /* ---- pointer interaction: the field reacts to the cursor ---- */
+  var influenceR = 150 * DPR;
+  function setMouseFromEvent(clientX, clientY){
+    mouse.x = clientX * DPR;
+    mouse.y = clientY * DPR;
+    mouse.active = true;
+    var dx = mouse.x - mouse.lastFireX, dy = mouse.y - mouse.lastFireY;
+    if (dx*dx + dy*dy > (70*DPR)*(70*DPR)){
+      mouse.lastFireX = mouse.x; mouse.lastFireY = mouse.y;
+      if (!reduceMotion){
+        var idx = nearestNode(mouse.x, mouse.y);
+        if (idx > -1){
+          var n = nodes[idx];
+          var d = Math.hypot(n.x0-mouse.x, n.y0-mouse.y);
+          if (d < influenceR * 1.4){ n.flash = Math.max(n.flash, .8); spawnPulse(idx, 1); }
+        }
+      }
+    }
+  }
+  window.addEventListener('pointermove', function(e){ setMouseFromEvent(e.clientX, e.clientY); }, {passive:true});
+  window.addEventListener('pointerleave', function(){ mouse.active = false; mouse.x = mouse.y = -9999; });
+  window.addEventListener('pointerdown', function(e){
+    var idx = nearestNode(e.clientX*DPR, e.clientY*DPR);
+    if (idx > -1){
+      nodes[idx].flash = 1;
+      for (var b=0;b<3;b++) spawnPulse(idx, 0);
+    }
+  }, {passive:true});
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+
+    /* ---- physics: spring each node back home, pointer nudges it away ---- */
+    var t = performance.now() * 0.001;
+    nodes.forEach(function(n){
+      if (!reduceMotion && mouse.active){
+        var dx = n.x0 - mouse.x, dy = n.y0 - mouse.y;
+        var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+        if (dist < influenceR){
+          var force = (1 - dist/influenceR) * 22 * DPR;
+          n.vx += (dx/dist) * force * 0.02;
+          n.vy += (dy/dist) * force * 0.02;
+        }
+      }
+      /* damped spring back to home position */
+      var springK = 0.02, damping = 0.9;
+      n.vx += (0 - n.ox) * springK;
+      n.vy += (0 - n.oy) * springK;
+      n.vx *= damping; n.vy *= damping;
+      n.ox += n.vx; n.oy += n.vy;
+
+      var breathe = reduceMotion ? 0 : Math.sin(t*0.6 + n.phase) * 1.1 * DPR;
+      n.x = n.x0 + n.ox;
+      n.y = n.y0 + n.oy + breathe;
+    });
+
+    /* static dendrite structure, brighter near the cursor */
+    ctx.lineWidth = DPR;
+    edges.forEach(function(e){
+      var a = nodes[e.a], b = nodes[e.b];
+      var c = edgeControl(e);
+      var midX = (a.x+b.x)/2, midY = (a.y+b.y)/2;
+      var near = mouse.active ? Math.max(0, 1 - Math.hypot(midX-mouse.x, midY-mouse.y)/(influenceR*1.3)) : 0;
+      ctx.strokeStyle = 'rgba(111,122,130,' + (0.14 + near*0.28) + ')';
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.quadraticCurveTo(c.x, c.y, b.x, b.y);
+      ctx.stroke();
+      if (near > 0.05){
+        ctx.strokeStyle = 'rgba(47,225,217,' + (near*0.22) + ')';
+        ctx.lineWidth = DPR * 1.4;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.quadraticCurveTo(c.x, c.y, b.x, b.y);
+        ctx.stroke();
+        ctx.lineWidth = DPR;
+      }
+    });
+
+    /* node bodies — soma nodes glow faintly, all nodes flash on fire */
+    nodes.forEach(function(n){
+      if (n.soma){
+        var haloA = 0.10 + Math.sin(t*0.8 + n.phase)*0.04;
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(47,225,217,' + haloA + ')';
+        ctx.arc(n.x, n.y, n.r*2.4, 0, Math.PI*2);
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(111,122,130,.32)';
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.fill();
+      if (n.flash > 0){
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(47,225,217,' + n.flash + ')';
+        ctx.lineWidth = 1.4 * DPR;
+        ctx.arc(n.x, n.y, n.r + (1-n.flash)*18*DPR, 0, Math.PI*2);
+        ctx.stroke();
+        n.flash -= 0.03;
+      }
+    });
+
+    /* travelling pulses, with a short fading comet trail */
+    for (var i = pulses.length-1; i>=0; i--){
+      var p = pulses[i];
+      p.t += p.speed;
+      var e = edges[p.edgeIdx];
+      var tt = p.reversed ? 1-p.t : p.t;
+      var color = p.warm ? '201,122,62' : '47,225,217';
+
+      for (var trail=3; trail>=0; trail--){
+        var tOff = Math.max(0, Math.min(1, tt - (p.reversed?-1:1)*trail*0.035));
+        var pos = pointOnEdge(e, tOff);
+        var a = (1 - trail/4);
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba('+color+','+(a*0.8)+')';
+        ctx.arc(pos.x, pos.y, (2.4 - trail*0.4)*DPR, 0, Math.PI*2);
+        ctx.fill();
+      }
+      var head = pointOnEdge(e, Math.max(0,Math.min(1,tt)));
+      var grad = ctx.createRadialGradient(head.x,head.y,0,head.x,head.y,11*DPR);
+      grad.addColorStop(0, 'rgba('+color+',.9)');
+      grad.addColorStop(1, 'rgba('+color+',0)');
+      ctx.beginPath();
+      ctx.fillStyle = grad;
+      ctx.arc(head.x, head.y, 11*DPR, 0, Math.PI*2);
+      ctx.fill();
+
+      if (p.t >= 1){
+        var arrivalIdx = p.reversed ? e.a : e.b;
+        nodes[arrivalIdx].flash = 1;
+        if (p.depth < 3 && Math.random() < 0.55){
+          spawnPulse(arrivalIdx, p.depth+1);
+        }
+        pulses.splice(i,1);
+      }
+    }
+
+    if (!reduceMotion) requestAnimationFrame(draw);
+  }
+
+  buildNetwork();
+  for (var s=0; s<4; s++) ambientSpawn();
+  if (!reduceMotion) requestAnimationFrame(draw); else draw();
+
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(buildNetwork, 200);
+  });
+
+  /* ---------- Agent widget ---------- */
+  var launcher = document.getElementById('agentLauncher');
+  var panel = document.getElementById('agentPanel');
+  var body = document.getElementById('agentBody');
+  var input = document.getElementById('agentInput');
+  var send = document.getElementById('agentSend');
+
+  function togglePanel(){
+    var open = launcher.classList.toggle('open');
+    panel.classList.toggle('open', open);
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    launcher.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) input.focus();
+  }
+  launcher.addEventListener('click', togglePanel);
+
+  function appendMessage(text, who){
+    var msg = document.createElement('div');
+    msg.className = 'agent-msg ' + who;
+    msg.textContent = text;
+    body.appendChild(msg);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function handleAgentMessage(){
+    var text = input.value.trim();
+    if (!text) return;
+    appendMessage(text, 'user');
+    input.value = '';
+    // TODO: substituir esta resposta simulada pela chamada real ao agente de IA
+    // (endpoint do backend / API do modelo). Este é apenas um placeholder de interface.
+    setTimeout(function(){
+      appendMessage('Obrigado pela sua mensagem. Em breve este assistente estará conectado ao agente de IA da SynapseAI para respostas em tempo real.', 'bot');
+    }, 500);
+  }
+  send.addEventListener('click', handleAgentMessage);
+  input.addEventListener('keypress', function(e){ if (e.key === 'Enter') handleAgentMessage(); });
+
+})();
+</script>
+</body>
+</html>
